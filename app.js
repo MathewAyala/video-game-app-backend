@@ -26,7 +26,7 @@ async function errorHandler(err, req, res, next){
 }
 
 async function startApp(){
-    await db.sync();
+    await db.sync({alter: true});
     app.listen(PORT, () => console.log(`Running on Port ${PORT}`) )
 }
 startApp()
