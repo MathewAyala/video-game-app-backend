@@ -3,6 +3,7 @@ const app = express();
 const PORT = 8080;
 const {db, Game, User, Review} = require('./models') 
 const gameRouter = require('./routes/games')
+const reviewRouter = require('./routes/review')
 const cors = require('cors')
 const morgan = require('morgan')
 
@@ -11,6 +12,7 @@ app.use(cors())
 // app.use(morgan())
 app.use(logger)
 app.use('/games', gameRouter)
+app.use('/games', reviewRouter)
 app.use(errorHandler)
 
 async function logger(req, res, next){
