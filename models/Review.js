@@ -4,7 +4,7 @@ const db = require("../db");
 const Review = db.define("Review", {
   description: { type: DataTypes.STRING(8000), allowNull: false },
   rating: {
-    type: DataTypes.DECIMAL(2, 1),
+    type: DataTypes.DECIMAL(3, 1),
     validate: {
       min: 1,
       max: 10,
