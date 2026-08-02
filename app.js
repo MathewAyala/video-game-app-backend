@@ -90,7 +90,7 @@ async function logger(req, res, next){
 }
 
 async function errorHandler(err, req, res, next){
-    console.error('ERROR:', err.message);
+    console.error(err);
   // jwtCheck throws a 401 when a token is missing or invalid. Respect any
   // status the error already carries; anything else is a real server error.
   const status = err.status || err.statusCode || 500;
@@ -114,7 +114,7 @@ async function startServer(){
     // requests, then close the DB connection so nothing is left hanging.
     const shutdown = () => {
       console.log('\n👋 Shutting down...');
-      server.close(async () => {
+        db.close(async () => {
         await db.close();
         process.exit(0);
       });

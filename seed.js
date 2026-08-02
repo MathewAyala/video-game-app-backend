@@ -8,11 +8,11 @@ const games = [
     {title: 'Mario Party', genre: 'Party',},
     {title: 'Mario Bros.', genre: 'Platform',ESRB: 'E 10+'},
 ]
-
-const users = [
-    {username: 'CrimsonReaper44', platform: 'XBOX, PlayStation, Switch'},
-    {username: 'AnnoyingGirlFromDR', platform: 'PlayStation'},
-]
+//name, username, email
+// const users = [
+//     {name: 'Mathew', username: 'CrimsonReaper44', email: 'mathew@example.com' },
+//     {name: 'Yomi', username: 'AnnoyingGirlFromDR', email: 'yomi@example.com' },
+// ]
 
 const reviews = [
     {description: 'mid', rating: 5, platform: 'switch', GameId: 3}
